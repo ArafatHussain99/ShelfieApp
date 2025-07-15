@@ -1,10 +1,10 @@
 
-import {  StyleSheet, Text, } from 'react-native';
-import { Link } from 'expo-router';
-import ThemedView from '../components/ThemedView';
-import ThemedLogo from '../components/ThemedLogo';
 import Spacer from '@/components/Spacer';
 import ThemedText from '@/components/ThemedText';
+import { Link } from 'expo-router';
+import { StyleSheet } from 'react-native';
+import ThemedLogo from '../components/ThemedLogo';
+import ThemedView from '../components/ThemedView';
 
 
 
@@ -17,8 +17,8 @@ export default function HomeScreen() {
       <ThemedText >Reading List App</ThemedText>
       <Spacer/>
       <Link href="/register" style={styles.link}><ThemedText>Registration Page</ThemedText></Link>
-
       <Link href="/login" style={styles.link}><ThemedText>Login Page</ThemedText></Link>
+            <Link href="/profile" style={styles.link}><ThemedText>Profile Page</ThemedText></Link>
     </ThemedView>
   );
 }
