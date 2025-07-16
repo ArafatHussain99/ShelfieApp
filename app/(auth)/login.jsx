@@ -14,11 +14,15 @@ const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const {user} = useUser();
+    const { login } = useUser()
 
-    const handleSubmit = ()=>{
-        console.log('Current User', user)
-        console.log('Login button pressed', email,password) // Placeholder for login logic
+    const handleSubmit = async()=>{
+        try{
+            await login(email, password);
+            //console.log('current use is: ', user)
+        }catch(error){
+
+        }
     }
   return (
     <ThemedView style={styles.container}>

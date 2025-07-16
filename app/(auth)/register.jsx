@@ -8,12 +8,21 @@ import { useState } from 'react';
 import ThemedButton from '../../components/ThemedButton';
 import ThemedTextInput from '../../components/ThemedTextInput';
 import ThemedView from '../../components/ThemedView';
+import {useUser} from '../../hooks/useUser'
 
 const Register = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const handleSubmit = ()=>{
-        console.log('Register button pressed', email, password) // Placeholder for login logic
+
+    const { register} = useUser()
+
+    const handleSubmit = async()=>{
+        try{
+            await register(email, password);
+            //console.log('current use is: ', user)
+        }catch(error){
+
+        }
     }
     return (
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
