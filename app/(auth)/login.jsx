@@ -8,11 +8,16 @@ import { useState } from 'react';
 import ThemedButton from '../../components/ThemedButton';
 import ThemedTextInput from '../../components/ThemedTextInput';
 import ThemedView from '../../components/ThemedView';
+import { useUser } from '../../hooks/useUser';
 
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
+    const {user} = useUser();
+
     const handleSubmit = ()=>{
+        console.log('Current User', user)
         console.log('Login button pressed', email,password) // Placeholder for login logic
     }
   return (
