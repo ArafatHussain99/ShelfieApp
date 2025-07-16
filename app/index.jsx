@@ -18,7 +18,7 @@ export default function HomeScreen() {
       <Spacer/>
       <Link href="/register" style={styles.link}><ThemedText>Registration Page</ThemedText></Link>
       <Link href="/login" style={styles.link}><ThemedText>Login Page</ThemedText></Link>
-            <Link href="/profile" style={styles.link}><ThemedText>Profile Page</ThemedText></Link>
+      <Link href="/profile" style={styles.link}><ThemedText>Profile Page</ThemedText></Link>
     </ThemedView>
   );
 }
